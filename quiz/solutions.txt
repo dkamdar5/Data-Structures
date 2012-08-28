@@ -1,0 +1,4 @@
+1. fear.txt
+2. .secret-hidden-file
+3. boogers!
+4. 148176
