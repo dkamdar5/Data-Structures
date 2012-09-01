@@ -4,13 +4,13 @@
         (else (* x (power x (- y 1))))))
 
 (define (range x)
-  (cond ((eq? x 0) '0)
-        (else (cons (range(- x 1)) (cons x null)))))
+  (cond ((eq? x 1) 0)
+        (else (cons (range(- x 1)) (- x 1)))))
 
 (define (append xx yy)
-  (cond ((eq? xx null) null
-        (eq? yy null) null)
-        (else (cons (xx yy)))))
+  (cond ((eq? xx null) yy)
+        ((eq? yy null) xx)
+        (else (cons (car xx) (append (cdr xx) yy)))))
 
 (define (reverse xx)
   (cond ((eq? (cdr xx) null) xx)
