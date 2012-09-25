@@ -3,7 +3,7 @@
            delete dlist-reverse dlist-to-cons cons-to-dlist
            dlist-tests)
 
-  (struct dlist (front back size) #:mutable #:transparent)
+  (struct dlist (sentinel size) #:mutable #:transparent)
   (struct dnode (prev data next) #:mutable #:transparent)
 
   (define (make-dlist)
