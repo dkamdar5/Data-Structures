@@ -1,0 +1,67 @@
+Grading Script Report for dkamdar
+Lab: Queue Lab
+Timestamp: 2012-09-25 13:57:31.724162
+Commit: 36ad8fcc4d965149c2c5294a7d18d7c9cdf6de2f
+
+* Summary
+Test                                       Result                          Max Score
+Testing Student's Queue                    Other Error                     45  0    
+Qualifying Student's Queue Tests           Tests Passed                    5   5    
+Delete doesn't decrement size.             Your tests didn't detect error. 5   0    
+Increment doesn't increment size.          Your tests didn't detect error. 5   0    
+Back queue never reversed to front.        Your tests didn't detect error. 5   0    
+Queue elements added to front.             Your tests didn't detect error. 5   0    
+Dequeue and top *always* reverse the back. Your tests didn't detect error. 5   0    
+Reversal operation doesn't clear back.     Your tests didn't detect error. 5   0    
+Dequeue doesn't remove element.            Your tests didn't detect error. 5   0    
+Top removes element.                       Your tests didn't detect error. 5   0    
+Reverse operation doesn't reverse.         Your tests didn't detect error. 5   0    
+Top returns first element in back list.    Your tests didn't detect error. 5   0    
+
+
+Total Score: 5/100
+
+* Details
+Testing Student's Queue details:
+racket run-tests.rkt
+test-queue.rkt:10:15: expand: unbound identifier in module in: make-queue
+
+ === context ===
+standard-module-name-resolver
+standard-module-name-resolver
+
+make: *** [tests] Error 1
+
+Qualifying Student's Queue Tests details:
+
+
+Delete doesn't decrement size. details:
+
+
+Increment doesn't increment size. details:
+
+
+Back queue never reversed to front. details:
+
+
+Queue elements added to front. details:
+
+
+Dequeue and top *always* reverse the back. details:
+
+
+Reversal operation doesn't clear back. details:
+
+
+Dequeue doesn't remove element. details:
+
+
+Top removes element. details:
+
+
+Reverse operation doesn't reverse. details:
+
+
+Top returns first element in back list. details:
+
+
