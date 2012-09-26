@@ -20,7 +20,7 @@
   (define (pop s)
     (if (null? (stack-data s)) null
       (begin
-    ;    (set-stack-size! s (- (stack-size s) 1))  ; oh no! a bug!
+        (set-stack-size! s (- (stack-size s) 1))  ; oh no! a bug!
         (set-stack-data! s (cdr (stack-data s)))
         )))
 
