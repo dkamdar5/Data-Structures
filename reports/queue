@@ -1,36 +1,79 @@
 Grading Script Report for dkamdar
 Lab: Queue Lab
-Timestamp: 2012-09-25 17:58:56.727345
-Commit: e4873c2bece19dee316ea2afcd82c665c8c8f264
+Timestamp: 2012-09-25 22:53:27.470867
+Commit: 7dbd484f09e689ca41efb43d319c4dd255e055d1
 
 * Summary
 Test                                       Result                          Max Score
-Testing Student's Queue                    Other Error                     45  0    
+Testing Student's Queue                    Errors detected                 45  30   
 Qualifying Student's Queue Tests           Tests Passed                    5   5    
-Delete doesn't decrement size.             Your tests didn't detect error. 5   0    
-Increment doesn't increment size.          Your tests didn't detect error. 5   0    
-Back queue never reversed to front.        Your tests didn't detect error. 5   0    
+Delete doesn't decrement size.             Your tests worked.              5   5    
+Increment doesn't increment size.          Your tests worked.              5   5    
+Back queue never reversed to front.        Your tests worked.              5   5    
 Queue elements added to front.             Your tests didn't detect error. 5   0    
-Dequeue and top *always* reverse the back. Your tests didn't detect error. 5   0    
-Reversal operation doesn't clear back.     Your tests didn't detect error. 5   0    
-Dequeue doesn't remove element.            Your tests didn't detect error. 5   0    
-Top removes element.                       Your tests didn't detect error. 5   0    
+Dequeue and top *always* reverse the back. Your tests worked.              5   5    
+Reversal operation doesn't clear back.     Your tests worked.              5   5    
+Dequeue doesn't remove element.            Your tests worked.              5   5    
+Top removes element.                       Your tests worked.              5   5    
 Reverse operation doesn't reverse.         Your tests didn't detect error. 5   0    
-Top returns first element in back list.    Your tests didn't detect error. 5   0    
+Top returns first element in back list.    Your tests worked.              5   5    
 
 
-Total Score: 5/100
+Total Score: 75/100
 
 * Details
 Testing Student's Queue details:
 racket run-tests.rkt
-test-queue.rkt:10:15: expand: unbound identifier in module in: make-queue
+2
+--------------------
+Tests for the Queue > One Element Queue --- Internal Test
+One Element Queue --- Internal Test
+FAILURE
+name:       check-equal?
+location:   test-queue.rkt:33:6
+message:    "Is the element in the front list?"
+actual:     '()
+
+expected:   '(10)
+
+Check failure
 
  === context ===
-standard-module-name-resolver
-standard-module-name-resolver
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/queue/dkamdar/run-tests.rkt: [running body]
 
-make: *** [tests] Error 1
+--------------------
+--------------------
+Tests for the Queue > Multi Element Queue --- Internal Test
+Multi Element Queue --- Internal Test
+FAILURE
+name:       check-equal?
+location:   test-queue.rkt:100:6
+message:    "Now back of queue should be empty."
+actual:     '(0 0 3 2 8 8 5)
+
+expected:   '()
+
+Check failure
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/queue/dkamdar/run-tests.rkt: [running body]
+
+--------------------
+4 success(es) 2 failure(s) 0 error(s) 6 test(s) run
 
 Qualifying Student's Queue Tests details:
 
