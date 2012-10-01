@@ -31,7 +31,7 @@
       (check-equal? (size q) 1 "One element should be added.")
       (check-equal? (queue-back q) '(10) "The element should be in the back list.")
       (check-equal? (top q) 10 "Look at the element.")
-      (check-equal? (queue-front q) '() "The element should not be in the front list.")
+      (check-equal? (queue-back q) '() "The element should not be in the back list.")
       (dequeue q)
       (check-equal? (size q) 0 "Queue should now have size zero.")
       (check-equal? (queue-back q) '() "The back queue must be empty.")
