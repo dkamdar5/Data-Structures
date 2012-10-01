@@ -1,38 +1,42 @@
 (module queue racket
   (provide make-queue enqueue dequeue top size queue-tests)
-  (struct queue (front back size) #:mutable)
+  (struct queue (front back size) #:mutable #:transparent)
 
   ; Your Code Here
   (define (make-queue) (queue null null 0))
   
   (define (enqueue q elt)
     (set-queue-size! q (+ (queue-size q) 1))
-    (set-queue-front! q (cons elt (queue-front q))))
+    (set-queue-back! q (cons elt (queue-back q))))
   
   (define (dequeue q)
      (if (and (null? (queue-front q)) (null? (queue-back q))) null
-         (if (null? (queue-back q))
+         (if (null? (queue-front q))
              (begin
-               (set-queue-back! q (cdr (reverse (queue-front q))))
-               (set-queue-front! q null)
+               (back-to-front q)
                (set-queue-size! q (- (queue-size q) 1)))
              (begin
-               (set-queue-back! q (cdr (queue-back q)))
+               (set-queue-front! q (cdr (queue-front q)))
                (set-queue-size! q (- (queue-size q) 1))))))
-  
+   
   (define (top q)
-    (if (and (null? (queue-front q)) (null? (queue-back q))) null
-        (if (null? (queue-back q)) (last (queue-front q))
-              (car (queue-back q)))))
+    (back-to-front q)
+    (if (null? (queue-front q)) null
+              (car (queue-front q))))
   
   (define (size q)
     (queue-size q))
   
-  (define (reverse xx)
-  (define (aux x y)
-    (cond ((null? x) y)
-          (else (aux (cdr x) (cons (car x) y)))))
-  (aux xx null))
+  (define (back-to-front q)
+    (set-queue-front! q (append (queue-front q) (reverse (queue-back q))))
+    (set-queue-back! q null)
+    )
+  
+  ;(define (reverse xx)
+  ;(define (aux x y)
+  ;  (cond ((null? x) y)
+  ;        (else (aux (cdr x) (cons (car x) y)))))
+  ;(aux xx null))
 
 
   ; Test cases Here
