@@ -1,12 +1,12 @@
 Grading Script Report for dkamdar
 Lab: Queue Lab
-Timestamp: 2012-10-01 16:02:36.227537
-Commit: e1f088f492f5ba0fa49d718d3f3ac68ce3230cd3
+Timestamp: 2012-10-01 18:03:45.961503
+Commit: 6b765f162501c9560dee509006e79ad3d311c212
 
 * Summary
 Test                                       Result             Max Score
 Testing Student's Queue                    Tests Passed       45  45   
-Qualifying Student's Queue Tests           Errors detected    5   4    
+Qualifying Student's Queue Tests           Tests Passed       5   5    
 Delete doesn't decrement size.             Your tests worked. 5   5    
 Increment doesn't increment size.          Your tests worked. 5   5    
 Back queue never reversed to front.        Your tests worked. 5   5    
@@ -19,40 +19,14 @@ Reverse operation doesn't reverse.         Your tests worked. 5   5
 Top returns first element in back list.    Your tests worked. 5   5    
 
 
-Total Score: 99/100
+Total Score: 100/100
 
 * Details
 Testing Student's Queue details:
 
 
 Qualifying Student's Queue Tests details:
-racket run-tests.rkt
-1
---------------------
-Tests for the Queue > One Element Queue --- Internal Test
-One Element Queue --- Internal Test
-FAILURE
-name:       check-equal?
-location:   test-queue.rkt:34:6
-message:    "The element should not be in the front list."
-actual:     '(10)
 
-expected:   '()
-
-Check failure
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
-/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/queue/dkamdar/run-tests.rkt: [running body]
-
---------------------
-5 success(es) 1 failure(s) 0 error(s) 6 test(s) run
 
 Delete doesn't decrement size. details:
 
