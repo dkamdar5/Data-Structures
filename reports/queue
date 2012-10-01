@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: Queue Lab
-Timestamp: 2012-09-28 13:14:23.581983
-Commit: 4b2e232c7c004b0a88a6edf54a86003d4198f003
+Timestamp: 2012-10-01 12:34:21.823909
+Commit: 94fb627b6e17ae6a17de25f1a3e84413a1cc85ca
 
 * Summary
 Test                                       Result             Max Score
@@ -30,8 +30,8 @@ Tests for the Queue > One Element Queue --- Internal Test
 One Element Queue --- Internal Test
 FAILURE
 name:       check-equal?
-location:   test-queue.rkt:33:6
-message:    "Is the element in the front list?"
+location:   test-queue.rkt:31:6
+message:    "Is the element in the back list?"
 actual:     '()
 
 expected:   '(10)
@@ -54,9 +54,9 @@ Tests for the Queue > Multi Element Queue --- Internal Test
 Multi Element Queue --- Internal Test
 FAILURE
 name:       check-equal?
-location:   test-queue.rkt:100:6
-message:    "Now back of queue should be empty."
-actual:     '(0 0 3 2 8 8 5)
+location:   test-queue.rkt:95:11
+message:    "Front of queue should stay empty."
+actual:     '(5)
 
 expected:   '()
 
@@ -65,6 +65,7 @@ Check failure
  === context ===
 /usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
 /usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/tmp/quarry/queue/dkamdar/test-queue.rkt:91:6: for-loop
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
 the-tests
