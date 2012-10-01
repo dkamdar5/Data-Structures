@@ -7,23 +7,23 @@
   
   (define (enqueue q elt)
     (set-queue-size! q (+ (queue-size q) 1))
-    (set-queue-back! q (cons elt (queue-back q))))
+    (set-queue-front! q (cons elt (queue-front q))))
   
   (define (dequeue q)
      (if (and (null? (queue-front q)) (null? (queue-back q))) null
-         (if (null? (queue-front q))
+         (if (null? (queue-back q))
              (begin
-               (set-queue-front! q (cdr (reverse (queue-back q))))
-               (set-queue-back! q null)
+               (set-queue-back! q (cdr (reverse (queue-front q))))
+               (set-queue-front! q null)
                (set-queue-size! q (- (queue-size q) 1)))
              (begin
-               (set-queue-front! q (cdr (queue-front q)))
+               (set-queue-back! q (cdr (queue-back q)))
                (set-queue-size! q (- (queue-size q) 1))))))
   
   (define (top q)
     (if (and (null? (queue-front q)) (null? (queue-back q))) null
-        (if (null? (queue-front q)) (last (queue-back q))
-              (car (queue-front q)))))
+        (if (null? (queue-back q)) (last (queue-front q))
+              (car (queue-back q)))))
   
   (define (size q)
     (queue-size q))
