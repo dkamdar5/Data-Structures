@@ -8,7 +8,8 @@
 
     (test-case "Initial dlist Properties"
     (let  ((dl (make-dlist)))
-      (check-equal? (size dl) 0 "list initially should have size zero.")
+      (check-equal? (size dl) 0 "Dlist initially should have size zero.")
+      (check-equal? (delete dl) null "")
       ))
 
 ))
