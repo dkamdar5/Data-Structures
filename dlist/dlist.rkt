@@ -28,21 +28,34 @@
         (set-dnode-next! (dlist-sentinel dl) node);set next of the sentinal to itself 
         (inc-dlist-size! dl))))
   
-  (define (insert-back xx elt)
-    (let ((node (dnode (dnode-prev (dlist-sentinel xx)) elt (dlist-sentinel xx))))
+  (define (insert-back dl elt)
+    (let ((node (dnode (dnode-prev (dlist-sentinel dl)) elt (dlist-sentinel dl))))
       ;node = new dnode. prev = prev dnode of sentinal. data = element. next = sentinal.
       (begin
-        (set-dnode-prev! (dlist-sentinel xx) node);set prev of sentinal to itselft
+        (set-dnode-prev! (dlist-sentinel dl) node);set prev of sentinal to itselft
         (set-dnode-next! (dnode-prev node) node);set next of the prev node to itself
-        (inc-dlist-size! xx))))
+        (inc-dlist-size! dl))))
   
-  (define insert-ordered null)
+  (define (find-greater dn elt)
+    (cond ((null? dn) null)
+          ((< elt (dnode-data dn)) dn)
+          (else (find-greater (dnode-next dn) elt))))
   
-  (define delete null)
+  (define (insert-ordered dl elt)
+    (if ((eq? (size dl)) 0) (insert-front dl elt)
+     (find-greater (dnode-next (dlist-sentinel dl)) elt)))
   
-  (define dlist-reverse null)
+  (define (delete dl elt)
+    null
+    )
   
-  (define dlist-to-cons null)
+  (define (dlist-reverse dl)
+    null
+    )
+  
+  (define (dlist-to-cons dl)
+    null
+    )
   
   (define (cons-to-dlist cl)
     make-list)
