@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: Doubly Linked List Lab
-Timestamp: 2012-10-25 21:11:33.953687
-Commit: 121be3b95366b7cc462eb1347c0d44c53c7f6246
+Timestamp: 2012-10-25 22:26:38.237731
+Commit: 82257c4fedea25e4761720e97a7451df3ff121ea
 
 * Summary
 Test                             Result                                 Max Score
@@ -22,12 +22,12 @@ Total Score: 0/100
 * Details
 Testing student code details:
 ulimit -v 1000000 -t 10 ; racket run-tests.rkt
-/bin/sh: line 1: 16156 Killed                  racket run-tests.rkt
+/bin/sh: line 1:  2159 Killed                  racket run-tests.rkt
 make: *** [tests] Error 137
 
 Testing student tests details:
 ulimit -v 1000000 -t 10 ; racket run-tests.rkt
-1
+2
 --------------------
 Tests for the dlist > Initial dlist Properties
 Initial dlist Properties
@@ -35,7 +35,14 @@ ERROR
 procedure delete: expects 2 arguments, given 1: (dlist #0=(dnode #0# 'sentinel #0#) 0)
 
 --------------------
-0 success(es) 0 failure(s) 1 error(s) 1 test(s) run
+--------------------
+Tests for the dlist > One Element dlist --- Functional Test
+One Element dlist --- Functional Test
+ERROR
+procedure insert-front: expects 2 arguments, given 3: (dlist #0=(dnode #0# 'sentinel #0#) 0) 10 ""
+
+--------------------
+0 success(es) 0 failure(s) 2 error(s) 2 test(s) run
 
 Size doesn't increment details:
 
