@@ -90,5 +90,6 @@
       (delete dl '10)
       (delete dl '20)
       (check-equal? (size dl) 0 "")
+      ))
 ))
 
