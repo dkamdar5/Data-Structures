@@ -46,7 +46,9 @@
      (find-greater (dnode-next (dlist-sentinel dl)) elt)))
   
   (define (delete dl elt)
-    null
+    (if (null? (find-greater dl elt)) null
+        (if ((eq? (dnode-data (dnode-prev (find-greater dl elt)))))
+            ()))
     )
   
   (define (dlist-reverse dl)
@@ -58,7 +60,7 @@
       (cond ((equal? (dlist-size x) 0) y)
             (else
              (define y (cons (dnode-data (dnode-prev (dlist-sentinel x))) y))
-             (delete x (car y))
+             ;(delete x (car y))
              (aux x y))))
     (aux dl '()))
   
