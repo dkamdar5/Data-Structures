@@ -54,11 +54,22 @@
     )
   
   (define (dlist-to-cons dl)
-    null
-    )
+    (define (aux x y)
+      (cond ((equal? (dlist-size x) 0) y)
+            (else
+             (define y (cons (dnode-data (dnode-prev (dlist-sentinel x))) y))
+             (delete x (car y))
+             (aux x y))))
+    (aux dl '()))
   
   (define (cons-to-dlist cl)
-    make-list)
+    (define dl (make-dlist))
+    (define (aux x y)
+      (cond ((null? x) y)
+            (else
+               (insert-back dl (car x))
+               (aux (cdr x) dl))))
+    (aux cl dl))
 
   ; Test cases here
   (include "test-dlist.rkt")
