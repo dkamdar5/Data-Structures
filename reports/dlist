@@ -1,23 +1,23 @@
 Grading Script Report for dkamdar
 Lab: Doubly Linked List Lab
-Timestamp: 2012-10-25 23:31:35.345387
-Commit: e232e6073c793d8f9e373ce1a3714243854a15e3
+Timestamp: 2012-10-25 23:43:45.18699
+Commit: 337c18f5bc60a3109d64625862106c5c73305272
 
 * Summary
-Test                             Result                          Max Score
-Testing student code             Other Error                     55  0    
-Testing student tests            Tests Passed                    5   5    
-Size doesn't increment           Your tests worked.              5   5    
-Insert front and back reversed.  Your tests didn't detect error. 5   0    
-Backward links don't work        Your tests worked.              5   5    
-Delete decrement doesn't run.    Your tests worked.              5   5    
-Delete decrements even on empty. Your tests worked.              5   5    
-Delete doesn't do anything.      Your tests worked.              5   5    
-Insert back doesn't do anything. Your tests worked.              5   5    
-Reverse doesn't do anything.     Your tests didn't detect error. 5   0    
+Test                             Result                                 Max Score
+Testing student code             Other Error                            55  0    
+Testing student tests            Other Error                            5   0    
+Size doesn't increment           Test Skipped: Qualifying tests failed. 5   0    
+Insert front and back reversed.  Test Skipped: Qualifying tests failed. 5   0    
+Backward links don't work        Test Skipped: Qualifying tests failed. 5   0    
+Delete decrement doesn't run.    Test Skipped: Qualifying tests failed. 5   0    
+Delete decrements even on empty. Test Skipped: Qualifying tests failed. 5   0    
+Delete doesn't do anything.      Test Skipped: Qualifying tests failed. 5   0    
+Insert back doesn't do anything. Test Skipped: Qualifying tests failed. 5   0    
+Reverse doesn't do anything.     Test Skipped: Qualifying tests failed. 5   0    
 
 
-Total Score: 35/100
+Total Score: 0/100
 
 * Details
 Testing student code details:
@@ -39,11 +39,22 @@ the-tests
 
 
 --------------------
-/bin/sh: line 1: 19245 Killed                  racket run-tests.rkt
+/bin/sh: line 1: 22409 Killed                  racket run-tests.rkt
 make: *** [tests] Error 137
 
 Testing student tests details:
+ulimit -v 1000000 -t 10 ; racket run-tests.rkt
+dlist.rkt:94:2: include: read error (test-dlist.rkt:6:2: read: expected a `)' to close `('; indentation suggests a missing `)' before line 10) in: (include "test-dlist.rkt")
 
+ === context ===
+/usr/lib64/racket/collects/racket/private/more-scheme.rkt:166:2: select-handler/no-breaks
+/usr/lib64/racket/collects/racket/include.rkt:72:20: loop
+/usr/lib64/racket/collects/racket/include.rkt:13:0
+/usr/lib64/racket/collects/racket/private/modbeg.rkt:46:4
+standard-module-name-resolver
+standard-module-name-resolver
+
+make: *** [tests] Error 1
 
 Size doesn't increment details:
 
