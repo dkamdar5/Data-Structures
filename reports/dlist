@@ -1,12 +1,12 @@
 Grading Script Report for dkamdar
 Lab: Doubly Linked List Lab
-Timestamp: 2012-10-25 23:43:45.18699
-Commit: 337c18f5bc60a3109d64625862106c5c73305272
+Timestamp: 2012-10-25 23:49:46.681635
+Commit: 312a9650cd5fedb8a5d3911bf30c36fdc6982a16
 
 * Summary
 Test                             Result                                 Max Score
 Testing student code             Other Error                            55  0    
-Testing student tests            Other Error                            5   0    
+Testing student tests            Errors detected                        5   3    
 Size doesn't increment           Test Skipped: Qualifying tests failed. 5   0    
 Insert front and back reversed.  Test Skipped: Qualifying tests failed. 5   0    
 Backward links don't work        Test Skipped: Qualifying tests failed. 5   0    
@@ -17,7 +17,7 @@ Insert back doesn't do anything. Test Skipped: Qualifying tests failed. 5   0
 Reverse doesn't do anything.     Test Skipped: Qualifying tests failed. 5   0    
 
 
-Total Score: 0/100
+Total Score: 3/100
 
 * Details
 Testing student code details:
@@ -39,22 +39,37 @@ the-tests
 
 
 --------------------
-/bin/sh: line 1: 22409 Killed                  racket run-tests.rkt
+/bin/sh: line 1: 23920 Killed                  racket run-tests.rkt
 make: *** [tests] Error 137
 
 Testing student tests details:
 ulimit -v 1000000 -t 10 ; racket run-tests.rkt
-dlist.rkt:94:2: include: read error (test-dlist.rkt:6:2: read: expected a `)' to close `('; indentation suggests a missing `)' before line 10) in: (include "test-dlist.rkt")
+1
+--------------------
+Tests for the dlist > Multi-Element dlist --- Internal Test
+Multi-Element dlist --- Internal Test
+FAILURE
+name:       check-equal?
+location:   test-dlist.rkt:68:6
+message:    ""
+actual:     20
+
+expected:   10
+
+Check failure
 
  === context ===
-/usr/lib64/racket/collects/racket/private/more-scheme.rkt:166:2: select-handler/no-breaks
-/usr/lib64/racket/collects/racket/include.rkt:72:20: loop
-/usr/lib64/racket/collects/racket/include.rkt:13:0
-/usr/lib64/racket/collects/racket/private/modbeg.rkt:46:4
-standard-module-name-resolver
-standard-module-name-resolver
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/dlist/dkamdar/run-tests.rkt: [running body]
 
-make: *** [tests] Error 1
+--------------------
+3 success(es) 1 failure(s) 0 error(s) 4 test(s) run
 
 Size doesn't increment details:
 
