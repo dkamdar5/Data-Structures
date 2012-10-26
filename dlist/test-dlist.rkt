@@ -57,5 +57,6 @@
       (check-equal? (size dl) 0 "")
       (check-equal? (dnode-data (dnode-next (dlist-sentinal dl))) '() "")
       (check-equal? (dnode-data (dnode-prev (dlist-sentinal dl))) '() "")
+      ))
 ))
 
