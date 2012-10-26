@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: Doubly Linked List Lab
-Timestamp: 2012-10-25 22:41:14.241991
-Commit: a3543e33e02ecfd56087e9916006e4308c6c2fbc
+Timestamp: 2012-10-25 22:47:38.525017
+Commit: e37e57ed279179a3196ae089f6657b192463a11b
 
 * Summary
 Test                             Result                                 Max Score
@@ -22,18 +22,14 @@ Total Score: 0/100
 * Details
 Testing student code details:
 ulimit -v 1000000 -t 10 ; racket run-tests.rkt
-/bin/sh: line 1:  5537 Killed                  racket run-tests.rkt
+/bin/sh: line 1:  7240 Killed                  racket run-tests.rkt
 make: *** [tests] Error 137
 
 Testing student tests details:
 ulimit -v 1000000 -t 10 ; racket run-tests.rkt
-dlist.rkt:94:2: include: read error (test-dlist.rkt:6:2: read: expected a `)' to close `('; indentation suggests a missing `)' before line 10) in: (include "test-dlist.rkt")
+test-dlist.rkt:38:45: expand: unbound identifier in module in: dlist-sentinal
 
  === context ===
-/usr/lib64/racket/collects/racket/private/more-scheme.rkt:166:2: select-handler/no-breaks
-/usr/lib64/racket/collects/racket/include.rkt:72:20: loop
-/usr/lib64/racket/collects/racket/include.rkt:13:0
-/usr/lib64/racket/collects/racket/private/modbeg.rkt:46:4
 standard-module-name-resolver
 standard-module-name-resolver
 
