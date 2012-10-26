@@ -43,13 +43,17 @@
   
   (define (insert-ordered dl elt)
     (if ((eq? (size dl)) 0) (insert-front dl elt)
-     (find-greater (dnode-next (dlist-sentinel dl)) elt)))
+         (begin
+         (find-greater (dnode (dlist-sentinel dl)) elt)
+         (let ((node (dnode (dnode-prev (find-greater (dnode-next (dlist-sentinel dl)) elt)) elt (find-greater (dnode-next (dlist-sentinel dl)) elt))))
+           (set-dnode-prev! ((find-greater (dnode-next (dlist-sentinel dl)) elt)) node)
+           (set-dnode-next! (dnode-prev (find-greater (dnode-next (dlist-sentinel dl)) elt)) node)
+           (inc-dlist-size! dl)))))
   
   (define (delete dl elt)
     (if (null? (find-greater dl elt)) null
-        (if ((eq? (dnode-data (dnode-prev (find-greater dl elt)))))
-            ()))
-    )
+        (if ((eq? (dnode-data (dnode-prev (find-greater dl elt))))) null
+            null)))
   
   (define (dlist-reverse dl)
     null
