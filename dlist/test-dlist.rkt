@@ -7,10 +7,19 @@
     "Tests for the dlist"
 
     (test-case "Initial dlist Properties"
-    (let  ((dl (make-dlist)))
+    (let ((dl (make-dlist)))
       (check-equal? (size dl) 0 "Dlist initially should have size zero.")
       (check-equal? (delete dl) null "")
+      (check-equal? (size dl) 0 "")
       ))
-
+    
+    (test-case "One Element dlist --- Functional Test"
+    (let ((dl (make-dlist)))
+      (check-equal? (size dl) 0 "")
+      (insert-front dl '10 "")
+      (check-equal? (size dl) 1 "")
+      (delete dl '10)
+      (check-equal? (size dl) 0 "")
+      ))
 ))
 
