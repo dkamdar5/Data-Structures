@@ -56,7 +56,7 @@
             null)))
   
   (define (dlist-reverse dl)
-    null
+    dl
     )
   
   (define (dlist-to-cons dl)
