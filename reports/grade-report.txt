@@ -3,7 +3,7 @@ Netid: dkamdar  CWID: A20265708
 Course: cs331: Data Structures
 Assignment Group: 0
 Semester: 2012-08
-Date: Thu Oct 25 23:13:16
+Date: Thu Oct 25 23:31:57
 
 Assignment             Status Raw Max Norm     Weight Points 
 ---------------------- ------ --- --- -------- ------ -------

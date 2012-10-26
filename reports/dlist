@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: Doubly Linked List Lab
-Timestamp: 2012-10-25 23:13:03.717079
-Commit: ebc31bedf523c79a0c6f68acd52bdc04dbcabab8
+Timestamp: 2012-10-25 23:31:35.345387
+Commit: e232e6073c793d8f9e373ce1a3714243854a15e3
 
 * Summary
 Test                             Result                          Max Score
@@ -22,13 +22,25 @@ Total Score: 35/100
 * Details
 Testing student code details:
 ulimit -v 1000000 -t 10 ; racket run-tests.rkt
-dlist.rkt:50:8: if: bad syntax (must have an "else" expression) in: (if ((eq? (dnode-data (dnode-prev (find-greater dl elt))))) ())
+--------------------
+Tests for the dlist > Initial dlist Properties
+Initial dlist Properties
+ERROR
+dnode-data: expects argument of type <struct:dnode>; given (dlist #0=(dnode #0# 'sentinel #0#) 0)
 
  === context ===
-standard-module-name-resolver
-standard-module-name-resolver
+/tmp/quarry/dlist/dkamdar/dlist.rkt:53:2: delete
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/dlist/dkamdar/run-tests.rkt: [running body]
 
-make: *** [tests] Error 1
+
+--------------------
+/bin/sh: line 1: 19245 Killed                  racket run-tests.rkt
+make: *** [tests] Error 137
 
 Testing student tests details:
 
