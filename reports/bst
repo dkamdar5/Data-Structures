@@ -1,0 +1,60 @@
+Grading Script Report for dkamdar
+Lab: BST Lab
+Timestamp: 2012-11-06 17:58:45.944264
+Commit: 3cf19652a5e601b574f853bd2a97b151d96d642b
+
+* Summary
+Test                                         Result                                 Max Score
+Testing student code                         Compiler Error                         45  0    
+Testing student tests                        Compiler Error                         5   0    
+Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
+Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
+Delete doesn't decrement size.               Test Skipped: Qualifying tests failed. 5   0    
+Delete decrements size too much.             Test Skipped: Qualifying tests failed. 5   0    
+Leaf delete doesn't work.                    Test Skipped: Qualifying tests failed. 5   0    
+One child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
+Two child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
+Two child delete doesn't delete predecessor. Test Skipped: Qualifying tests failed. 5   0    
+Comparison operation reversed.               Test Skipped: Qualifying tests failed. 5   0    
+Values only reflect keys.                    Test Skipped: Qualifying tests failed. 5   0    
+
+
+Total Score: 0/100
+
+* Details
+Testing student code details:
+make: *** No rule to make target `compile'.  Stop.
+
+Testing student tests details:
+make: *** No rule to make target `compile'.  Stop.
+
+Size never increments. details:
+
+
+Size increments too much. details:
+
+
+Delete doesn't decrement size. details:
+
+
+Delete decrements size too much. details:
+
+
+Leaf delete doesn't work. details:
+
+
+One child delete doesn't work. details:
+
+
+Two child delete doesn't work. details:
+
+
+Two child delete doesn't delete predecessor. details:
+
+
+Comparison operation reversed. details:
+
+
+Values only reflect keys. details:
+
+
