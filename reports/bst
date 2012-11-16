@@ -1,12 +1,12 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 17:21:31.278421
-Commit: b82acb63ac24c71e139f6327f7f8c1c0272cbaba
+Timestamp: 2012-11-16 17:33:23.821088
+Commit: f9d9d3b61f5409d1f093bb688382b520b81bfd7b
 
 * Summary
 Test                                         Result                                 Max Score
 Testing student code                         Errors detected                        45  12   
-Testing student tests                        Errors detected                        5   0    
+Testing student tests                        Other Error                            5   0    
 Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
 Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
 Delete doesn't decrement size.               Test Skipped: Qualifying tests failed. 5   0    
@@ -29,9 +29,10 @@ ulimit -v 1000000 ; racket run-tests.rkt
 Tests for the bst > Deleting leaves
 Deleting leaves
 ERROR
-procedure application: expected procedure, given: '(); arguments were: (bst (bst-node 4 4 (bst-node 2 2 (bst-node 1 1 '() '()) (bst-node 3 3 '() '())) (bst-node 6 6 (bst-node 5 5 '() '()) (bst-nod... 1
+bst-root: expects argument of type <struct:bst>; given '()
 
  === context ===
+/tmp/quarry/bst/dkamdar/test-bst.rkt:5:0: bst-to-cons
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
 the-tests
@@ -45,7 +46,7 @@ the-tests
 Tests for the bst > Deleting one-child nodes
 Deleting one-child nodes
 ERROR
-procedure application: expected procedure, given: '(); arguments were: (bst (bst-node 4 4 (bst-node 2 2 (bst-node 1 1 '() '()) (bst-node 3 3 '() '())) (bst-node 6 6 (bst-node 5 5 '() '()) (bst-nod... 1
+bst-size: expects argument of type <struct:bst>; given '()
 
  === context ===
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
@@ -61,7 +62,7 @@ the-tests
 Tests for the bst > Deleting two-child nodes
 Deleting two-child nodes
 ERROR
-procedure application: expected procedure, given: '(); arguments were: (bst (bst-node 4 4 (bst-node 2 2 (bst-node 1 1 '() '()) (bst-node 3 3 '() '())) (bst-node 6 6 (bst-node 5 5 '() '()) (bst-nod... 2
+bst-size: expects argument of type <struct:bst>; given '()
 
  === context ===
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
@@ -80,7 +81,7 @@ ERROR
 bst-node: expects 4 arguments, given 1: #<procedure:bst>
 
  === context ===
-/tmp/quarry/bst/dkamdar/bst.rkt:70:2: find
+/tmp/quarry/bst/dkamdar/bst.rkt:72:2: find
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
 the-tests
@@ -110,56 +111,14 @@ the-tests
 
 Testing student tests details:
 ulimit -v 1000000 ; racket run-tests.rkt
-2
---------------------
-Tests for the bst > Initial BST Properties
-Initial BST Properties
-FAILURE
-name:       check-equal?
-location:   test-bst.rkt:17:6
-message:    "increment size"
-actual:     0
-
-expected:   1
-
-Check failure
+test-bst.rkt:12:6: let: bad syntax in: (let ((newbst (delete bst 1))))
 
  === context ===
-/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
-/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+/usr/lib64/racket/collects/racket/private/qq-and-or.rkt:12:20: go
+standard-module-name-resolver
+standard-module-name-resolver
 
---------------------
---------------------
-Tests for the bst > One Element BST --- Functional Test
-One Element BST --- Functional Test
-FAILURE
-name:       check-equal?
-location:   test-bst.rkt:27:7
-message:    "Increment size"
-actual:     0
-
-expected:   1
-
-Check failure
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
-/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
---------------------
-0 success(es) 2 failure(s) 0 error(s) 2 test(s) run
+make: *** [tests] Error 1
 
 Size never increments. details:
 
