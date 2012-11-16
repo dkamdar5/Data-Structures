@@ -78,17 +78,17 @@
         [else {or (find-aux (bst-node-left (bst-node bst)) k)
                   (find-aux (bst-node-right (bst-node bst)) k)}]))
   
-  (define (bst-to-cons tree)
-    (bst-to-cons-aux (bst-root tree))
-    )
+  ;(define (bst-to-cons tree)
+   ; (bst-to-cons-aux (bst-root tree))
+    ;)
   
-  (define (bst-to-cons-aux node)
-    (cond [(null? node) 'leaf]
-          [else(list (bst-node-key node)
-                     (bst-node-value node)
-                     (bst-to-cons-aux (bst-node-left node))
-                     (bst-to-cons-aux (bst-node-right node))
-                     )]))
+  ;(define (bst-to-cons-aux node)
+   ; (cond [(null? node) 'leaf]
+    ;      [else(list (bst-node-key node)
+     ;                (bst-node-value node)
+      ;               (bst-to-cons-aux (bst-node-left node))
+       ;              (bst-to-cons-aux (bst-node-right node))
+        ;             )]))
 
   ; Test cases here
   (include "test-bst.rkt")
