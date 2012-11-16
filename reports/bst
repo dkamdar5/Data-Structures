@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 17:45:16.035365
-Commit: d5fa94f92c6c4628e2ed3ce720cf836e924c5e07
+Timestamp: 2012-11-16 17:51:07.52187
+Commit: 6c0e8a13c3760a713b41d928821f1f3a26faf19d
 
 * Summary
 Test                                         Result                                 Max Score
@@ -111,7 +111,7 @@ the-tests
 
 Testing student tests details:
 ulimit -v 1000000 ; racket run-tests.rkt
-test-bst.rkt:14:14: internal definition: duplicate binding name at: newbst in: (define-values (newbst) (add bst 1 (quote one)))
+test-bst.rkt:14:14: internal definition: duplicate binding name at: newbst in: (define-values (newbst) (add newbst 1 (quote one)))
 
  === context ===
 standard-module-name-resolver
