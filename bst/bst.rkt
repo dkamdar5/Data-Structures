@@ -53,7 +53,9 @@
     ;(else (bst-node (bst-node-key node) (bst-node-value node) (bst-node-left node) (aux (bst-node-right node) key value)))))
   
     
-  (define delete null)
+  (define (delete bst k)
+    null
+    )
   
 ;(define (find bst k)
 ;(cond [(null? (bst-root bst)) #f]
