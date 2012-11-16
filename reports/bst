@@ -1,25 +1,25 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 10:38:30.458
-Commit: c7a59cbac08b75b42673f7ceb4a8d07c5839f6d1
+Timestamp: 2012-11-16 16:34:05.396041
+Commit: 89f1ad54f2baf8b81637f30a1b957aedd04dd2f3
 
 * Summary
-Test                                         Result                          Max Score
-Testing student code                         Other Error                     45  0    
-Testing student tests                        Tests Passed                    5   5    
-Size never increments.                       Your tests didn't detect error. 5   0    
-Size increments too much.                    Your tests didn't detect error. 5   0    
-Delete doesn't decrement size.               Your tests didn't detect error. 5   0    
-Delete decrements size too much.             Your tests didn't detect error. 5   0    
-Leaf delete doesn't work.                    Your tests didn't detect error. 5   0    
-One child delete doesn't work.               Your tests didn't detect error. 5   0    
-Two child delete doesn't work.               Your tests didn't detect error. 5   0    
-Two child delete doesn't delete predecessor. Your tests didn't detect error. 5   0    
-Comparison operation reversed.               Your tests didn't detect error. 5   0    
-Values only reflect keys.                    Your tests didn't detect error. 5   0    
+Test                                         Result                                 Max Score
+Testing student code                         Other Error                            45  0    
+Testing student tests                        Errors detected                        5   0    
+Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
+Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
+Delete doesn't decrement size.               Test Skipped: Qualifying tests failed. 5   0    
+Delete decrements size too much.             Test Skipped: Qualifying tests failed. 5   0    
+Leaf delete doesn't work.                    Test Skipped: Qualifying tests failed. 5   0    
+One child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
+Two child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
+Two child delete doesn't delete predecessor. Test Skipped: Qualifying tests failed. 5   0    
+Comparison operation reversed.               Test Skipped: Qualifying tests failed. 5   0    
+Values only reflect keys.                    Test Skipped: Qualifying tests failed. 5   0    
 
 
-Total Score: 5/100
+Total Score: 0/100
 
 * Details
 Testing student code details:
@@ -33,7 +33,33 @@ standard-module-name-resolver
 make: *** [tests] Error 1
 
 Testing student tests details:
+ulimit -v 1000000 ; racket run-tests.rkt
+1
+--------------------
+Tests for the bst > Initial dlist Properties
+Initial dlist Properties
+FAILURE
+name:       check-equal?
+location:   test-bst.rkt:13:6
+message:    "increment size"
+actual:     0
 
+expected:   1
+
+Check failure
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+
+--------------------
+0 success(es) 1 failure(s) 0 error(s) 1 test(s) run
 
 Size never increments. details:
 
