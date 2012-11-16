@@ -1,11 +1,11 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 16:34:05.396041
-Commit: 89f1ad54f2baf8b81637f30a1b957aedd04dd2f3
+Timestamp: 2012-11-16 16:51:35.847414
+Commit: dc02fda6177d838deca76b885e3531aa4cfa174d
 
 * Summary
 Test                                         Result                                 Max Score
-Testing student code                         Other Error                            45  0    
+Testing student code                         Errors detected                        45  12   
 Testing student tests                        Errors detected                        5   0    
 Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
 Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
@@ -19,28 +19,104 @@ Comparison operation reversed.               Test Skipped: Qualifying tests fail
 Values only reflect keys.                    Test Skipped: Qualifying tests failed. 5   0    
 
 
-Total Score: 0/100
+Total Score: 12/100
 
 * Details
 Testing student code details:
 ulimit -v 1000000 ; racket run-tests.rkt
-test-bst.rkt:5:9: module: duplicate definition for identifier at: bst-to-cons in: (define-values (bst-to-cons) (lambda (tree) (bst-to-cons-aux (bst-root tree))))
+5
+--------------------
+Tests for the bst > Deleting leaves
+Deleting leaves
+ERROR
+procedure application: expected procedure, given: '(); arguments were: (bst (bst-node 4 4 (bst-node 2 2 (bst-node 1 1 '() '()) (bst-node 3 3 '() '())) (bst-node 6 6 (bst-node 5 5 '() '()) (bst-nod... 1
 
  === context ===
-standard-module-name-resolver
-standard-module-name-resolver
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
 
-make: *** [tests] Error 1
+
+--------------------
+--------------------
+Tests for the bst > Deleting one-child nodes
+Deleting one-child nodes
+ERROR
+procedure application: expected procedure, given: '(); arguments were: (bst (bst-node 4 4 (bst-node 2 2 (bst-node 1 1 '() '()) (bst-node 3 3 '() '())) (bst-node 6 6 (bst-node 5 5 '() '()) (bst-nod... 1
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the bst > Deleting two-child nodes
+Deleting two-child nodes
+ERROR
+procedure application: expected procedure, given: '(); arguments were: (bst (bst-node 4 4 (bst-node 2 2 (bst-node 1 1 '() '()) (bst-node 3 3 '() '())) (bst-node 6 6 (bst-node 5 5 '() '()) (bst-nod... 2
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the bst > Find Tests
+Find Tests
+ERROR
+bst-node: expects 4 arguments, given 1: #<procedure:bst>
+
+ === context ===
+/tmp/quarry/bst/dkamdar/bst.rkt:70:2: find
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the bst > Find Val Tests
+Find Val Tests
+ERROR
+bst-node: expects 4 arguments, given 0
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+2 success(es) 0 failure(s) 5 error(s) 7 test(s) run
 
 Testing student tests details:
 ulimit -v 1000000 ; racket run-tests.rkt
 1
 --------------------
-Tests for the bst > Initial dlist Properties
-Initial dlist Properties
+Tests for the bst > Initial BST Properties
+Initial BST Properties
 FAILURE
 name:       check-equal?
-location:   test-bst.rkt:13:6
+location:   test-bst.rkt:17:6
 message:    "increment size"
 actual:     0
 
