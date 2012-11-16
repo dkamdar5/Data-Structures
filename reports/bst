@@ -1,32 +1,39 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-06 17:58:45.944264
-Commit: 3cf19652a5e601b574f853bd2a97b151d96d642b
+Timestamp: 2012-11-16 10:38:30.458
+Commit: c7a59cbac08b75b42673f7ceb4a8d07c5839f6d1
 
 * Summary
-Test                                         Result                                 Max Score
-Testing student code                         Compiler Error                         45  0    
-Testing student tests                        Compiler Error                         5   0    
-Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
-Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
-Delete doesn't decrement size.               Test Skipped: Qualifying tests failed. 5   0    
-Delete decrements size too much.             Test Skipped: Qualifying tests failed. 5   0    
-Leaf delete doesn't work.                    Test Skipped: Qualifying tests failed. 5   0    
-One child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
-Two child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
-Two child delete doesn't delete predecessor. Test Skipped: Qualifying tests failed. 5   0    
-Comparison operation reversed.               Test Skipped: Qualifying tests failed. 5   0    
-Values only reflect keys.                    Test Skipped: Qualifying tests failed. 5   0    
+Test                                         Result                          Max Score
+Testing student code                         Other Error                     45  0    
+Testing student tests                        Tests Passed                    5   5    
+Size never increments.                       Your tests didn't detect error. 5   0    
+Size increments too much.                    Your tests didn't detect error. 5   0    
+Delete doesn't decrement size.               Your tests didn't detect error. 5   0    
+Delete decrements size too much.             Your tests didn't detect error. 5   0    
+Leaf delete doesn't work.                    Your tests didn't detect error. 5   0    
+One child delete doesn't work.               Your tests didn't detect error. 5   0    
+Two child delete doesn't work.               Your tests didn't detect error. 5   0    
+Two child delete doesn't delete predecessor. Your tests didn't detect error. 5   0    
+Comparison operation reversed.               Your tests didn't detect error. 5   0    
+Values only reflect keys.                    Your tests didn't detect error. 5   0    
 
 
-Total Score: 0/100
+Total Score: 5/100
 
 * Details
 Testing student code details:
-make: *** No rule to make target `compile'.  Stop.
+ulimit -v 1000000 ; racket run-tests.rkt
+test-bst.rkt:5:9: module: duplicate definition for identifier at: bst-to-cons in: (define-values (bst-to-cons) (lambda (tree) (bst-to-cons-aux (bst-root tree))))
+
+ === context ===
+standard-module-name-resolver
+standard-module-name-resolver
+
+make: *** [tests] Error 1
 
 Testing student tests details:
-make: *** No rule to make target `compile'.  Stop.
+
 
 Size never increments. details:
 
