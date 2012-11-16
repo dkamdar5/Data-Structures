@@ -53,9 +53,33 @@
     ;(else (bst-node (bst-node-key node) (bst-node-value node) (bst-node-left node) (aux (bst-node-right node) key value)))))
   
     
-  (define (delete bst k)
-    null
-    )
+  ;(define (delete bst k)
+   ; null
+    ;)
+  
+  (define (delete aBST key)
+(bst (delete-aux (bst-root aBST) key (bst-comp aBST)) (- (bst-size aBST) 1) (bst-comp aBST)))
+
+
+(define (delete-aux node k comp)
+(cond ((null? node) '())
+((equal? k (bst-node-key node)) ; this is the case where we've found what we are looking for
+(let ([has-no-children (and (null? (bst-node-left node)) (null? (bst-node-right node)))]
+[has-left (not (null? (bst-node-left node)))]
+[has-right (not (null? (bst-node-right node)))])
+(begin
+(cond ((has-no-children) '())
+((has-left) ; has at least one kid
+(cond ((has-right) do stuff...) ; has two kids
+(else (bst-node-left node)))) ; only has one kid
+((has-right) ; has at least one kid
+(cond ((has-left) do stuff...) ; has two kids
+(else (bst-node-right node)))))))) ; has only one kid - case where we found it ends here
+(else
+(cond ((comp k (bst-node-key)) go left) ; case where we didn't find it
+(else go right))
+)
+))
   
 ;(define (find bst k)
 ;(cond [(null? (bst-root bst)) #f]
