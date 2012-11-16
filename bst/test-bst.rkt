@@ -19,6 +19,14 @@
       (delete bst 1)
       (check-equal? (size bst) 0 "decrement size")
       ))
-
+    
+    (test-case "One Element BST --- Functional Test"
+     (let ((bst (make-bst <)))
+       (check-equal? (bst-size bst) 0 "Initial size")
+       (add bst 1 'one)
+       (check-equal? (bst-size bst) 1 "Increment size")
+       (delete bst 1)
+       (check-equal? (bst-size bst) 0 "Decrement size")
+     ))
 ))
 
