@@ -44,7 +44,7 @@
        (check-equal? (bst-node-left (bst-root c)) '() "1 deleted")
        (define d (delete b 4))
        (check-equal? (bst-size d) 4 "Decrement size")
-       (check-equal? (bst-node-right (bst-root d)) '() "4 deleted, and 2 children")
+       (check-equal? (bst-node-right (bst-root d)) (bst-node 3 'three '() (bst-node 5 'five '() '())) "4 deleted, and 2 children")
        (define e (add b 6 'six))
        (check-equal? (bst-size e) 6 "Increment size")
        (define f (delete e 5))
