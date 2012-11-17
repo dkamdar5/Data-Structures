@@ -1,12 +1,12 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 17:51:07.52187
-Commit: 6c0e8a13c3760a713b41d928821f1f3a26faf19d
+Timestamp: 2012-11-16 18:03:18.406843
+Commit: 921027b47aa34c0ca22fbf992a8cc5b24171cd34
 
 * Summary
 Test                                         Result                                 Max Score
-Testing student code                         Errors detected                        45  12   
-Testing student tests                        Other Error                            5   0    
+Testing student code                         Other Error                            45  0    
+Testing student tests                        Errors detected                        5   2    
 Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
 Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
 Delete doesn't decrement size.               Test Skipped: Qualifying tests failed. 5   0    
@@ -19,105 +19,47 @@ Comparison operation reversed.               Test Skipped: Qualifying tests fail
 Values only reflect keys.                    Test Skipped: Qualifying tests failed. 5   0    
 
 
-Total Score: 12/100
+Total Score: 2/100
 
 * Details
 Testing student code details:
 ulimit -v 1000000 ; racket run-tests.rkt
-5
---------------------
-Tests for the bst > Deleting leaves
-Deleting leaves
-ERROR
-bst-root: expects argument of type <struct:bst>; given '()
-
- === context ===
-/tmp/quarry/bst/dkamdar/test-bst.rkt:5:0: bst-to-cons
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
---------------------
-Tests for the bst > Deleting one-child nodes
-Deleting one-child nodes
-ERROR
-bst-size: expects argument of type <struct:bst>; given '()
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
---------------------
-Tests for the bst > Deleting two-child nodes
-Deleting two-child nodes
-ERROR
-bst-size: expects argument of type <struct:bst>; given '()
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
---------------------
-Tests for the bst > Find Tests
-Find Tests
-ERROR
-bst-node: expects 4 arguments, given 1: #<procedure:bst>
-
- === context ===
-/tmp/quarry/bst/dkamdar/bst.rkt:72:2: find
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
---------------------
-Tests for the bst > Find Val Tests
-Find Val Tests
-ERROR
-bst-node: expects 4 arguments, given 0
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
-2 success(es) 0 failure(s) 5 error(s) 7 test(s) run
-
-Testing student tests details:
-ulimit -v 1000000 ; racket run-tests.rkt
-test-bst.rkt:14:14: internal definition: duplicate binding name at: newbst in: (define-values (newbst) (add newbst 1 (quote one)))
+bst.rkt:73:19: do: bad syntax in: do
 
  === context ===
 standard-module-name-resolver
 standard-module-name-resolver
 
 make: *** [tests] Error 1
+
+Testing student tests details:
+ulimit -v 1000000 ; racket run-tests.rkt
+1
+--------------------
+Tests for the bst > Initial BST Properties
+Initial BST Properties
+FAILURE
+name:       check-equal?
+location:   test-bst.rkt:17:6
+message:    "decrement size"
+actual:     1
+
+expected:   0
+
+Check failure
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
+
+--------------------
+1 success(es) 1 failure(s) 0 error(s) 2 test(s) run
 
 Size never increments. details:
 
