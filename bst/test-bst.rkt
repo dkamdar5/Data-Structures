@@ -48,7 +48,7 @@
        (define e (add b 6 'six))
        (check-equal? (bst-size e) 6 "Increment size")
        (define f (delete e 5))
-       (check-equal? (bst-size f) 5 "Decrement size")
+       (check-equal? (bst-size f) 4 "Decrement size")
        (check-equal? (bst-node-right (bst-node-right (bst-root f))) '() "5 deleted, and 1 child")
                      
        ;(define b (add a 1 'one))
