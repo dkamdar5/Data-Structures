@@ -80,8 +80,9 @@
 (find-val (bst-node-right (bst-node)) k)}]))
   
   (define (find bst k)
-    (cond [(null? (bst-root bst)) #f] ;()s error
-        [else (find-aux (bst-root bst) k)]))
+    (cond ((null? (bst-root bst)) #f)
+        (else (find-aux (bst-root bst) k))
+  ))
 
   (define (find-aux node k)
     (cond [(null? node) #f]
