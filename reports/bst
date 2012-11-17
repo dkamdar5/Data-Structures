@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 18:39:05.258271
-Commit: 78c98f3a3b67c95743012c5f544c0d82dcd68de7
+Timestamp: 2012-11-16 18:44:53.384632
+Commit: 60c156d813200610c9ec6a3fb0696f968c77d689
 
 * Summary
 Test                                         Result                                 Max Score
@@ -116,7 +116,7 @@ Tests for the bst > Initial BST Properties
 Initial BST Properties
 FAILURE
 name:       check-equal?
-location:   test-bst.rkt:16:6
+location:   test-bst.rkt:17:6
 message:    "increment size"
 actual:     0
 
@@ -140,11 +140,11 @@ Tests for the bst > One Element BST --- Functional Test
 One Element BST --- Functional Test
 FAILURE
 name:       check-equal?
-location:   test-bst.rkt:30:7
-message:    "Increment size"
-actual:     0
+location:   test-bst.rkt:34:7
+message:    "Decrement size"
+actual:     1
 
-expected:   1
+expected:   0
 
 Check failure
 
