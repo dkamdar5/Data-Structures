@@ -26,10 +26,13 @@
     (test-case "One Element BST --- Functional Test"
      (let ((a (make-bst <)))
        (check-equal? (bst-size a) 0 "Initial size")
-       (define a (add a 1 'one))
+       (define b (add a 1 'one))
        (check-equal? (bst-size a) 1 "Increment size")
-       (define a (delete a 1))
+       (check-equal? (bst-size b) 1 "Increment size")
+       (define c (delete b 1))
        (check-equal? (bst-size a) 0 "Decrement size")
+       (check-equal? (bst-size b) 0 "Decrement size")
+       (check-equal? (bst-size c) 0 "Decrement size")
      ))
 ))
 
