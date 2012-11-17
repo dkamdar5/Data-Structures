@@ -94,13 +94,12 @@
 (find-val (bst-node-right (bst-node)) k)}]))
   
   (define (find bst k)
-  (cond [(null? (bst-root bst)) #f] ;()s error
+    (cond [(null? (bst-root bst)) #f] ;()s error
         [else (find-aux (bst-root bst) k)]))
 
-(define (find-aux node k); (bst-node bst) should just be a variable node
-  (cond [(null? node) #f] ;used node variable
-        [(eq? (bst-node-key node) k) (bst-node-value node)] ;if the correct node is found then you are to return its value Not the node itself
-        ;I did not change this last part because this searching method is incorrect
+  (define (find-aux node k)
+    (cond [(null? node) #f]
+        [(eq? (bst-node-key node) k) (bst-node-value node)]
         [else {or (find-aux (bst-node-left (bst-node bst)) k)
                   (find-aux (bst-node-right (bst-node bst)) k)}]))
   
