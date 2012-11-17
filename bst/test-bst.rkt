@@ -34,5 +34,27 @@
        (check-equal? (bst-size b) 1 "No change")
        (check-equal? (bst-size c) 0 "Decrement size")
      ))
+    
+    (test-case "Multi-Element BST --- Functional Test"
+     (let ((a (make-bst <)))
+       (define b (add(add (add (add (add a 2 'two) 4 'four) 1 'one) 3 'three) 5 'five))
+       (check-equal? (bst-size b) 5 "5 nodes added")
+       (define c (delete b 1))
+       (check-equal? (bst-size c) 4 "Decrement size")
+       (check-equal? (bst-node-left (bst-root b)) '() "1 deleted")
+       (define d (delete b 4))
+       (check-equal? (bst-size d) 2 "Decrement size")
+       (check-equal? (bst-node-right (bst-root b)) '() "4 deleted, and 2 children")
+       (define e (add b 6 'six))
+       (check-equal? (bst-size e) 6 "Increment size")
+       (define f (delete e 5))
+       (check-equal? (bst-size f) 5 "Decrement size")
+       (check-equal? (bst-node-right (bst-node-right (bst-root b))) '() "5 deleted, and 1 child")
+                     
+       ;(define b (add a 1 'one))
+       ;(define c (add b 2 'two))
+       ;(define d (add c 1 'one))
+       ;(define e (add d 3 'three))
+     ))
 ))
 
