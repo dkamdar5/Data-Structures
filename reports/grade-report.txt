@@ -3,14 +3,14 @@ Netid: dkamdar  CWID: A20265708
 Course: cs331: Data Structures
 Assignment Group: 0
 Semester: 2012-08
-Date: Fri Nov 16 18:09:13
+Date: Fri Nov 16 18:15:24
 
 Assignment             Status Raw Max Norm    Weight Points 
 ---------------------- ------ --- --- ------- ------ -------
 Queue Lab              Graded 100 100  100.00 0.0667  6.6667
 Doubly Linked List Lab Graded  35 100   35.00 0.0667  2.3333
-BST Lab                Graded  14 100   14.00 0.0667  0.9333
+BST Lab                Graded  12 100   12.00 0.0667  0.8000
 Midterm 1              Graded 112 114   98.25 0.4500 44.2105
 ---------------------- ------ --- --- ------- ------ -------
-Total                                 83.2982 0.6500 54.1439
+Total                                 83.0931 0.6500 54.0105
 
