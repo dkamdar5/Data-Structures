@@ -1,25 +1,25 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 18:44:53.384632
-Commit: 60c156d813200610c9ec6a3fb0696f968c77d689
+Timestamp: 2012-11-16 18:51:03.543351
+Commit: b01e34921884bc6f304dfe8440b15d7805ca1653
 
 * Summary
-Test                                         Result                                 Max Score
-Testing student code                         Errors detected                        45  12   
-Testing student tests                        Errors detected                        5   0    
-Size never increments.                       Test Skipped: Qualifying tests failed. 5   0    
-Size increments too much.                    Test Skipped: Qualifying tests failed. 5   0    
-Delete doesn't decrement size.               Test Skipped: Qualifying tests failed. 5   0    
-Delete decrements size too much.             Test Skipped: Qualifying tests failed. 5   0    
-Leaf delete doesn't work.                    Test Skipped: Qualifying tests failed. 5   0    
-One child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
-Two child delete doesn't work.               Test Skipped: Qualifying tests failed. 5   0    
-Two child delete doesn't delete predecessor. Test Skipped: Qualifying tests failed. 5   0    
-Comparison operation reversed.               Test Skipped: Qualifying tests failed. 5   0    
-Values only reflect keys.                    Test Skipped: Qualifying tests failed. 5   0    
+Test                                         Result                          Max Score
+Testing student code                         Errors detected                 45  12   
+Testing student tests                        Tests Passed                    5   5    
+Size never increments.                       Your tests worked.              5   5    
+Size increments too much.                    Your tests didn't detect error. 5   0    
+Delete doesn't decrement size.               Your tests worked.              5   5    
+Delete decrements size too much.             Your tests worked.              5   5    
+Leaf delete doesn't work.                    Your tests didn't detect error. 5   0    
+One child delete doesn't work.               Your tests didn't detect error. 5   0    
+Two child delete doesn't work.               Your tests didn't detect error. 5   0    
+Two child delete doesn't delete predecessor. Your tests didn't detect error. 5   0    
+Comparison operation reversed.               Your tests didn't detect error. 5   0    
+Values only reflect keys.                    Your tests didn't detect error. 5   0    
 
 
-Total Score: 12/100
+Total Score: 32/100
 
 * Details
 Testing student code details:
@@ -109,57 +109,7 @@ the-tests
 2 success(es) 0 failure(s) 5 error(s) 7 test(s) run
 
 Testing student tests details:
-ulimit -v 1000000 ; racket run-tests.rkt
-2
---------------------
-Tests for the bst > Initial BST Properties
-Initial BST Properties
-FAILURE
-name:       check-equal?
-location:   test-bst.rkt:17:6
-message:    "increment size"
-actual:     0
 
-expected:   1
-
-Check failure
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
-/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
---------------------
---------------------
-Tests for the bst > One Element BST --- Functional Test
-One Element BST --- Functional Test
-FAILURE
-name:       check-equal?
-location:   test-bst.rkt:34:7
-message:    "Decrement size"
-actual:     1
-
-expected:   0
-
-Check failure
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
-/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
---------------------
-0 success(es) 2 failure(s) 0 error(s) 2 test(s) run
 
 Size never increments. details:
 
