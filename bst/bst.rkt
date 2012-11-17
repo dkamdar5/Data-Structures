@@ -82,18 +82,18 @@
 ;[else {or (find (bst-node-left (bst-node)) k)
 ;(find (bst-node-right (bst-node)) k)}]))
 
-(define (find-val bst k)
-(cond [(null? (bst-root bst)) #f]
-[(eq? (bst-node-key (bst-node) k)) (bst-node-value)]
-[else {or (find-val (bst-node-left (bst-node)) k)
-(find-val (bst-node-right (bst-node)) k)}]))
+  (define (find-val bst k)
+    (cond [(null? (bst-root bst)) #f]
+          [(eq? (bst-node-key (bst-node) k)) (bst-node-value)]
+          [else {or (find-val (bst-node-left (bst-node)) k)
+                    (find-val (bst-node-right (bst-node)) k)}]))
   
   (define (find bst k)
-    (cond ((null? (bst-root bst)) #f)
+    (cond ((null? (bst-root bst)) '()))
         (else (find-aux (bst-root bst) k))))
 
   (define (find-aux node k)
-    (cond [(null? node) #f]
+    (cond [(null? node) '())]
           [(eq? (bst-node-key node) k) (bst-node-value node)]
           [(> k (bst-node-key node)) (find-aux (bst-node-right node) k)]
           [else (find-aux (bst-node-left node) k)]))
