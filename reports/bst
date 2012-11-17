@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 19:45:50.547995
-Commit: b3798d7ce41f6b252ea5d06bd82025891d92cc76
+Timestamp: 2012-11-16 19:51:38.818392
+Commit: 87523652f646476a1845e1eee77ee99d4ca58c6d
 
 * Summary
 Test                                         Result                                 Max Score
@@ -116,11 +116,11 @@ Tests for the bst > Multi-Element BST --- Functional Test
 Multi-Element BST --- Functional Test
 FAILURE
 name:       check-equal?
-location:   test-bst.rkt:46:7
-message:    "Decrement size"
-actual:     4
+location:   test-bst.rkt:47:7
+message:    "4 deleted, and 2 children"
+actual:     (bst-node 3 'three '() (bst-node 5 'five '() '()))
 
-expected:   2
+expected:   '()
 
 Check failure
 
