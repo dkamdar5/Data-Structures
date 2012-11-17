@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 23:07:25.473075
-Commit: 40aa65df27ee11601e67711faa5afacc11576589
+Timestamp: 2012-11-16 23:25:16.180281
+Commit: 8ccc0719bed801b9e43d84615290becba3ed9419
 
 * Summary
 Test                                         Result                          Max Score
@@ -89,18 +89,25 @@ the-tests
 --------------------
 Tests for the bst > Find Tests
 Find Tests
-ERROR
-bst-node: expects 4 arguments, given 1: #<procedure:bst>
+FAILURE
+name:       check-equal?
+location:   test-bst.rkt:149:17
+message:    "Find 17 to get null."
+actual:     #f
+
+expected:   '()
+
+Check failure
 
  === context ===
-/tmp/quarry/bst/dkamdar/bst.rkt:91:2: find
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
 the-tests
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
 /usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
 /tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
 
 --------------------
 --------------------
@@ -116,10 +123,6 @@ the-tests
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
 /usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
 /tmp/quarry/bst/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
-2 success(es) 1 failure(s) 4 error(s) 7 test(s) run
 
 Testing student tests details:
 
