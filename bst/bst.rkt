@@ -70,14 +70,14 @@
 (begin
 (cond ((has-no-children) '())
 ((has-left) ; has at least one kid
-(cond ((has-right) do stuff...) ; has two kids
+(cond ((has-right) null) ;do stuff...) ; has two kids
 (else (bst-node-left node)))) ; only has one kid
 ((has-right) ; has at least one kid
-(cond ((has-left) do stuff...) ; has two kids
+(cond ((has-left) null);do stuff...) ; has two kids
 (else (bst-node-right node)))))))) ; has only one kid - case where we found it ends here
 (else
-(cond ((comp k (bst-node-key)) go left) ; case where we didn't find it
-(else go right))
+(cond ((comp k (bst-node-key)) );go left) ; case where we didn't find it
+(else null));go right))
 )
 ))
   
