@@ -7,23 +7,23 @@
     "Tests for the bst"
 
     (test-case "Initial BST Properties"
-    (let  ((bst (make-bst <)))
-      (check-equal? (size bst) 0 "tree initially should have size zero.")
-      (define bst (delete bst 1))
-      (check-equal? (size bst) 0 "tree should have size zero.")
-      (define bst (add bst 1 'one))
-      (check-equal? (size bst) 1 "increment size")
-      (define bst (delete bst 1))
-      (check-equal? (size bst) 0 "decrement size")
+    (let  ((a (make-bst <)))
+      (check-equal? (size a) 0 "tree initially should have size zero.")
+      (define a (delete a 1))
+      (check-equal? (size a) 0 "tree should have size zero.")
+      (define a (add a 1 'one))
+      (check-equal? (size a) 1 "increment size")
+      (define a (delete a 1))
+      (check-equal? (size a) 0 "decrement size")
       ))
     
     (test-case "One Element BST --- Functional Test"
-     (let ((bst (make-bst <)))
-       (check-equal? (bst-size bst) 0 "Initial size")
-       (define bst (add bst 1 'one))
-       (check-equal? (bst-size bst) 1 "Increment size")
-       (define bst2 (delete bst 1))
-       (check-equal? (bst-size bst) 0 "Decrement size")
+     (let ((a (make-bst <)))
+       (check-equal? (bst-size a) 0 "Initial size")
+       (define a (add a 1 'one))
+       (check-equal? (bst-size a) 1 "Increment size")
+       (define a (delete a 1))
+       (check-equal? (bst-size a) 0 "Decrement size")
      ))
 ))
 
