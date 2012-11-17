@@ -88,8 +88,9 @@
           [else (find-val-aux (bst-node-left (bst-root bst)) (bst-node-right (bst-root bst) v))]))
            
   (define (find-val-aux left right v)
-    (cond [(eq? (bst-node-value left v)) left]
+    (cond  [(eq? (bst-node-value left v)) left]
            [(eq? (bst-node-value right v)) right]
+           [(null? (left)) (find-val-aux right left v)]
            [else '()]))
   
   (define (find bst k)
