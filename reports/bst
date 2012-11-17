@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: BST Lab
-Timestamp: 2012-11-16 19:40:01.221667
-Commit: ba32076e92cabb9eded7b7dfcecb2dbc04d7c82d
+Timestamp: 2012-11-16 19:45:50.547995
+Commit: b3798d7ce41f6b252ea5d06bd82025891d92cc76
 
 * Summary
 Test                                         Result                                 Max Score
@@ -80,7 +80,7 @@ ERROR
 bst-node: expects 4 arguments, given 1: #<procedure:bst>
 
  === context ===
-/tmp/quarry/bst/dkamdar/bst.rkt:96:2: find
+/tmp/quarry/bst/dkamdar/bst.rkt:82:2: find
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
 the-tests
