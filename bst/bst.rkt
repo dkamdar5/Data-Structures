@@ -90,14 +90,13 @@
   
   (define (find bst k)
     (cond ((null? (bst-root bst)) #f)
-        (else (find-aux (bst-root bst) k))
-  ))
+        (else (find-aux (bst-root bst) k))))
 
   (define (find-aux node k)
     (cond [(null? node) #f]
-        [(eq? (bst-node-key node) k) (bst-node-value node)]
-        [else {or (find-aux (bst-node-left (bst-node bst)) k)
-                  (find-aux (bst-node-right (bst-node bst)) k)}]))
+          [(eq? (bst-node-key node) k) (bst-node-value node)]
+          [(> k (bst-node-key node)) (find-aux (bst-node-right node) k)]
+          [else (find-aux (bst-node-left node) k)]))
   
   ;(define (bst-to-cons tree)
    ; (bst-to-cons-aux (bst-root tree))
