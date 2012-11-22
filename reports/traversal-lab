@@ -1,0 +1,40 @@
+Grading Script Report for dkamdar
+Lab: Traversal Lab
+Timestamp: 2012-11-21 20:48:23.342486
+Commit: 3bef60d7acc2f6581f8b18546d5f85a64e186497
+
+* Summary
+Test                             Result             Max Score
+Testing student code             Compiler Error     45  0    
+Testing student tests            Tests Passed       5   5    
+DFS Reversed.                    Your tests worked. 10  10   
+DFS Truncates Side               Your tests worked. 10  10   
+BFS emits nulls                  Your tests worked. 10  10   
+Preorder and postorder mixed up  Your tests worked. 10  10   
+Frontier returns too many things Your tests worked. 10  10   
+
+
+Total Score: 55/100
+
+* Details
+Testing student code details:
+make: *** No rule to make target `compile'.  Stop.
+
+Testing student tests details:
+
+
+DFS Reversed. details:
+
+
+DFS Truncates Side details:
+
+
+BFS emits nulls details:
+
+
+Preorder and postorder mixed up details:
+
+
+Frontier returns too many things details:
+
+
