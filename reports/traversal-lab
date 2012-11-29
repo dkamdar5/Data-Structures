@@ -1,27 +1,152 @@
 Grading Script Report for dkamdar
 Lab: Traversal Lab
-Timestamp: 2012-11-21 20:48:23.342486
-Commit: 3bef60d7acc2f6581f8b18546d5f85a64e186497
+Timestamp: 2012-11-29 16:23:56.728409
+Commit: 98eb653b9aae0aebc7fd714e6c53983b4b984643
 
 * Summary
-Test                             Result             Max Score
-Testing student code             Compiler Error     45  0    
-Testing student tests            Tests Passed       5   5    
-DFS Reversed.                    Your tests worked. 10  10   
-DFS Truncates Side               Your tests worked. 10  10   
-BFS emits nulls                  Your tests worked. 10  10   
-Preorder and postorder mixed up  Your tests worked. 10  10   
-Frontier returns too many things Your tests worked. 10  10   
+Test                             Result                                 Max Score
+Testing student code             Errors detected                        45  0    
+Testing student tests            Errors detected                        5   0    
+DFS Reversed.                    Test Skipped: Qualifying tests failed. 10  0    
+DFS Truncates Side               Test Skipped: Qualifying tests failed. 10  0    
+BFS emits nulls                  Test Skipped: Qualifying tests failed. 10  0    
+Preorder and postorder mixed up  Test Skipped: Qualifying tests failed. 10  0    
+Frontier returns too many things Test Skipped: Qualifying tests failed. 10  0    
 
 
-Total Score: 55/100
+Total Score: 0/100
 
 * Details
 Testing student code details:
-make: *** No rule to make target `compile'.  Stop.
+ulimit -v 1000000 -t 300 ; racket run-tests.rkt
+6
+--------------------
+Tests for the traversal lab > DFS Test
+DFS Test
+ERROR
+traverse-dfs undefined.
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the traversal lab > BFS Test
+BFS Test
+ERROR
+traverse-bfs undefined.
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the traversal lab > Preorder Test
+Preorder Test
+ERROR
+procedure application: expected procedure, given: #<stream> (no arguments)
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the traversal lab > Postorder Test
+Postorder Test
+FAILURE
+name:       check-equal?
+location:   test-traversal.rkt:29:6
+actual:     '(23
+  24
+  25
+  19
+  14
+  23
+  24
+  25
+  19
+  13
+  23
+  24
+  25
+  19
+  11
+  23
+  24
+  25
+  19
+  14
+  23
+  24
+  25
+  19
+  13
+  23
+  24
+  25
+  19
+  12
+  23
+  24
+  25
+  19
+  15
+  9
+  23
+  24
+  25
+  19
+  14
+  23
+  24
+  25
 
 Testing student tests details:
+ulimit -v 1000000 -t 300 ; racket run-tests.rkt
+1
+--------------------
+Tests for the traversal lab > Initial Properties
+Initial Properties
+FAILURE
+name:       check-equal?
+location:   test-traversal.rkt:11:6
+message:    "Student didn't write any tests."
+actual:     1
 
+expected:   0
+
+Check failure
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+--------------------
+0 success(es) 1 failure(s) 0 error(s) 1 test(s) run
 
 DFS Reversed. details:
 
