@@ -29,14 +29,16 @@
   
   (undefine traverse-dfs)
   (undefine traverse-bfs)
+  
   (define (traverse-preorder t)
-    (let ([empty-stream (stream)])
-      (begin
-        (preorder-aux t (empty-stream)))))
-  (define (preorder-aux t next)
-    (if (null? (tree-data t)) next
-        (stream-append (null) null)
-        ))
+    (preorder-aux t))
+  (define (preorder-aux t)
+    (cond [(null? t) (stream)]
+          ;[(null? (tree-left t)) (stream-cons (tree-data t)(preorder-aux (tree-right t)))]
+          ;[(null? (tree-right t)) (stream null)]
+          (else 
+           (stream-append (stream (tree-data t))
+                 (preorder-aux (tree-left t)) (preorder-aux (tree-right t))))))
   
   (undefine traverse-inorder)
   
