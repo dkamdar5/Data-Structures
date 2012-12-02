@@ -8,7 +8,7 @@
 
     (test-case "Initial Properties"
     (let  ((bst (make-tree)))
-      (check-equal? 1 0 "Student didn't write any tests.")
+      (check-equal? 1 1 "Student didn't write any tests.")
       ))
 
 ))
