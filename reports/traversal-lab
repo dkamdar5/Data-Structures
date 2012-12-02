@@ -1,11 +1,11 @@
 Grading Script Report for dkamdar
 Lab: Traversal Lab
-Timestamp: 2012-11-29 16:23:56.728409
-Commit: 98eb653b9aae0aebc7fd714e6c53983b4b984643
+Timestamp: 2012-12-01 21:19:03.393301
+Commit: 3813823a691445553842278d5f30edbd587579fe
 
 * Summary
 Test                             Result                                 Max Score
-Testing student code             Errors detected                        45  0    
+Testing student code             Errors detected                        45  7    
 Testing student tests            Errors detected                        5   0    
 DFS Reversed.                    Test Skipped: Qualifying tests failed. 10  0    
 DFS Truncates Side               Test Skipped: Qualifying tests failed. 10  0    
@@ -14,12 +14,12 @@ Preorder and postorder mixed up  Test Skipped: Qualifying tests failed. 10  0
 Frontier returns too many things Test Skipped: Qualifying tests failed. 10  0    
 
 
-Total Score: 0/100
+Total Score: 7/100
 
 * Details
 Testing student code details:
 ulimit -v 1000000 -t 300 ; racket run-tests.rkt
-6
+5
 --------------------
 Tests for the traversal lab > DFS Test
 DFS Test
@@ -41,22 +41,6 @@ Tests for the traversal lab > BFS Test
 BFS Test
 ERROR
 traverse-bfs undefined.
-
- === context ===
-/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
-the-tests
-/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
-/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
-/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
-
-
---------------------
---------------------
-Tests for the traversal lab > Preorder Test
-Preorder Test
-ERROR
-procedure application: expected procedure, given: #<stream> (no arguments)
 
  === context ===
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
@@ -118,6 +102,22 @@ actual:     '(23
   23
   24
   25
+  19
+  13
+  23
+  24
+  25
+  19
+  11
+  23
+  24
+  25
+  19
+  14
+  23
+  24
+  25
+  19
 
 Testing student tests details:
 ulimit -v 1000000 -t 300 ; racket run-tests.rkt
