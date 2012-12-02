@@ -1,20 +1,20 @@
 Grading Script Report for dkamdar
 Lab: Traversal Lab
-Timestamp: 2012-12-01 21:19:03.393301
-Commit: 3813823a691445553842278d5f30edbd587579fe
+Timestamp: 2012-12-01 23:00:48.04699
+Commit: 4ba61fadd0001f3e5cb6abaa837c6482f94225bc
 
 * Summary
-Test                             Result                                 Max Score
-Testing student code             Errors detected                        45  7    
-Testing student tests            Errors detected                        5   0    
-DFS Reversed.                    Test Skipped: Qualifying tests failed. 10  0    
-DFS Truncates Side               Test Skipped: Qualifying tests failed. 10  0    
-BFS emits nulls                  Test Skipped: Qualifying tests failed. 10  0    
-Preorder and postorder mixed up  Test Skipped: Qualifying tests failed. 10  0    
-Frontier returns too many things Test Skipped: Qualifying tests failed. 10  0    
+Test                             Result             Max Score
+Testing student code             Errors detected    45  7    
+Testing student tests            Tests Passed       5   5    
+DFS Reversed.                    Your tests worked. 10  10   
+DFS Truncates Side               Your tests worked. 10  10   
+BFS emits nulls                  Your tests worked. 10  10   
+Preorder and postorder mixed up  Your tests worked. 10  10   
+Frontier returns too many things Your tests worked. 10  10   
 
 
-Total Score: 7/100
+Total Score: 62/100
 
 * Details
 Testing student code details:
@@ -58,80 +58,9 @@ Postorder Test
 FAILURE
 name:       check-equal?
 location:   test-traversal.rkt:29:6
-actual:     '(23
-  24
-  25
-  19
-  14
-  23
-  24
-  25
-  19
-  13
-  23
-  24
-  25
-  19
-  11
-  23
-  24
-  25
-  19
-  14
-  23
-  24
-  25
-  19
-  13
-  23
-  24
-  25
-  19
-  12
-  23
-  24
-  25
-  19
-  15
-  9
-  23
-  24
-  25
-  19
-  14
-  23
-  24
-  25
-  19
-  13
-  23
-  24
-  25
-  19
-  11
-  23
-  24
-  25
-  19
-  14
-  23
-  24
-  25
-  19
+actual:     '(5 3 4 7 8 9 15 12 11 13 14 19 25 24 23 10)
 
-Testing student tests details:
-ulimit -v 1000000 -t 300 ; racket run-tests.rkt
-1
---------------------
-Tests for the traversal lab > Initial Properties
-Initial Properties
-FAILURE
-name:       check-equal?
-location:   test-traversal.rkt:11:6
-message:    "Student didn't write any tests."
-actual:     1
-
-expected:   0
+expected:   '(4 3 9 8 7 5 11 14 13 12 23 24 25 19 15 10)
 
 Check failure
 
@@ -146,7 +75,49 @@ the-tests
 /tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
 
 --------------------
-0 success(es) 1 failure(s) 0 error(s) 1 test(s) run
+--------------------
+Tests for the traversal lab > Inorder Test
+Inorder Test
+FAILURE
+name:       check-equal?
+location:   test-traversal.rkt:34:6
+actual:     '(5 3 4 7 8 9 10 15 12 11 13 14 19 25 24 23)
+
+expected:   '(3 4 5 7 8 9 10 11 12 13 14 15 19 23 24 25)
+
+Check failure
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+--------------------
+--------------------
+Tests for the traversal lab > Frontier Test
+Frontier Test
+ERROR
+traverse-frontier undefined.
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+1 success(es) 2 failure(s) 3 error(s) 6 test(s) run
+
+Testing student tests details:
+
 
 DFS Reversed. details:
 
