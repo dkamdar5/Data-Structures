@@ -27,15 +27,20 @@
                (tree (tree-data t) (tree-left t) (add-aux (tree-right t) elt)))]
           (else (tree elt null null))))
   
-  (undefine traverse-dfs)
+  (define (traverse-dfs t)
+    (dfs-aux t))
+  (define (dfs-aux t)
+    (cond [(null? t) (stream)]
+          (else 
+           (stream-append (stream (tree-data t))
+                 (dfs-aux (tree-left t)) (dfs-aux (tree-right t))))))
+  
   (undefine traverse-bfs)
   
   (define (traverse-preorder t)
     (preorder-aux t))
   (define (preorder-aux t)
     (cond [(null? t) (stream)]
-          ;[(null? (tree-left t)) (stream-cons (tree-data t)(preorder-aux (tree-right t)))]
-          ;[(null? (tree-right t)) (stream null)]
           (else 
            (stream-append (stream (tree-data t))
                  (preorder-aux (tree-left t)) (preorder-aux (tree-right t))))))
@@ -56,7 +61,13 @@
            (stream-append (postorder-aux (tree-left t)) (postorder-aux (tree-right t)) (stream (tree-data t))
            ))))
   
-  (undefine traverse-frontier)
+  (define (traverse-frontier t)
+    (traverse-frontier t))
+  (define (frontier-aux t)
+    (cond [(null? t) (stream)]
+          (else 
+           (stream-append (stream (tree-data t))
+                 (frontier-aux (tree-left t)) (frontier-aux (tree-right t))))))
   
   (define (stream-take st num)
     (cond [(stream-empty? st) '()]
