@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: Traversal Lab
-Timestamp: 2012-12-06 23:37:36.334133
-Commit: 326d354f1fe6324ed784d9cfa652e9aded8c96c3
+Timestamp: 2012-12-07 03:33:21.841903
+Commit: ef3aa9c8f9ca5bc223b7cab8b915dfda8003bb00
 
 * Summary
 Test                             Result             Max Score
@@ -24,9 +24,17 @@ ulimit -v 1000000 -t 300 ; racket run-tests.rkt
 Tests for the traversal lab > BFS Test
 BFS Test
 ERROR
-traverse-bfs undefined.
+queue-empty?: contract violation, expected: "queue", given: #<void>
+  contract from: <collects>/data/queue.rkt, blaming: 
+    /tmp/quarry/traversal-lab/dkamdar/traversal.rkt
+  contract: (-> "queue" boolean?)
+        at: <collects>/data/queue.rkt:98.2
 
  === context ===
+/usr/lib64/racket/collects/racket/contract/private/blame.rkt:58:0: raise-blame-error
+/tmp/quarry/traversal-lab/dkamdar/traversal.rkt:47:2: bfs-queue
+/usr/lib64/racket/collects/racket/private/stream-cons.rkt:42:0: stream-force
+/usr/lib64/racket/collects/racket/stream.rkt:39:0: stream->list
 /usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
 /usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
 the-tests
