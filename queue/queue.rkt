@@ -31,13 +31,6 @@
     (set-queue-front! q (append (queue-front q) (reverse (queue-back q))))
     (set-queue-back! q null)
     )
-  
-  ;(define (reverse xx)
-  ;(define (aux x y)
-  ;  (cond ((null? x) y)
-  ;        (else (aux (cdr x) (cons (car x) y)))))
-  ;(aux xx null))
-
 
   ; Test cases Here
   (include "test-queue.rkt")
