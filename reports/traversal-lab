@@ -1,24 +1,65 @@
 Grading Script Report for dkamdar
 Lab: Traversal Lab
-Timestamp: 2012-12-06 22:51:28.544354
-Commit: 3ba707b4cc255c5c8b26efd2ddb6cf00cadb0d94
+Timestamp: 2012-12-06 22:58:33.327772
+Commit: 321e7d2fd30ddbd860eff1ec1baac7f69122b473
 
 * Summary
-Test                             Result                                Max Score
-Testing student code             Tests took too long (infinite loop?). 45  0    
-Testing student tests            Tests Passed                          5   5    
-DFS Reversed.                    Your tests worked.                    10  10   
-DFS Truncates Side               Your tests worked.                    10  10   
-BFS emits nulls                  Your tests worked.                    10  10   
-Preorder and postorder mixed up  Your tests worked.                    10  10   
-Frontier returns too many things Your tests worked.                    10  10   
+Test                             Result             Max Score
+Testing student code             Errors detected    45  30   
+Testing student tests            Tests Passed       5   5    
+DFS Reversed.                    Your tests worked. 10  10   
+DFS Truncates Side               Your tests worked. 10  10   
+BFS emits nulls                  Your tests worked. 10  10   
+Preorder and postorder mixed up  Your tests worked. 10  10   
+Frontier returns too many things Your tests worked. 10  10   
 
 
-Total Score: 55/100
+Total Score: 85/100
 
 * Details
 Testing student code details:
-Output suppressed
+ulimit -v 1000000 -t 300 ; racket run-tests.rkt
+2
+--------------------
+Tests for the traversal lab > BFS Test
+BFS Test
+ERROR
+traverse-bfs undefined.
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+
+--------------------
+--------------------
+Tests for the traversal lab > Frontier Test
+Frontier Test
+FAILURE
+name:       check-equal?
+location:   test-traversal.rkt:39:6
+actual:     '(10 5 3 4 7 8 9 15 12 11 13 14 19 25 24 23)
+
+expected:   '(4 9 11 14 23)
+
+Check failure
+
+ === context ===
+/usr/lib64/racket/collects/rackunit/private/check.rkt:181:8
+/usr/lib64/racket/collects/rackunit/private/check.rkt:108:21: check-equal?237789
+/usr/lib64/racket/collects/rackunit/private/result.rkt:99:3
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:28:2
+the-tests
+/usr/lib64/racket/collects/rackunit/private/test-suite.rkt:60:0: apply-test-suite
+/usr/lib64/racket/collects/rackunit/text-ui.rkt:218:0: run-tests14
+/tmp/quarry/traversal-lab/dkamdar/run-tests.rkt: [running body]
+
+--------------------
+4 success(es) 1 failure(s) 1 error(s) 6 test(s) run
 
 Testing student tests details:
 
