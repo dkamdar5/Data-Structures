@@ -1,7 +1,7 @@
 Grading Script Report for dkamdar
 Lab: Traversal Lab
-Timestamp: 2012-12-06 23:11:29.081733
-Commit: bd5bedb0a89c2db417c3e6d0050541b1ad92ee13
+Timestamp: 2012-12-06 23:18:03.264916
+Commit: 0a78fbc41f4464589fe847020cb56567a695b7d0
 
 * Summary
 Test                             Result             Max Score
@@ -42,7 +42,7 @@ Frontier Test
 FAILURE
 name:       check-equal?
 location:   test-traversal.rkt:39:6
-actual:     '(3 4 7 8 9 11 13 14 19 23)
+actual:     '(3 7 11 13 19)
 
 expected:   '(4 9 11 14 23)
 
