@@ -96,9 +96,9 @@
     (frontier-aux t))
   (define (frontier-aux t)
     (cond [(null? t) (stream)]
+          [(null? (and (tree-right t) (tree-left t))) (stream (tree-data t))]
           [(null? (tree-left t)) (stream (tree-data t))]
           [(null? (tree-right t)) (stream (tree-data t))]
-          [(null? (and (tree-right t) (tree-left t))) (stream (tree-data t))]
           (else 
            (stream-append
                  (frontier-aux (tree-left t)) (frontier-aux (tree-right t))))))
