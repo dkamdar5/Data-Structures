@@ -45,7 +45,7 @@
   (define (inorder-aux t)
     (cond [(null? t) (stream)]
           (else
-           (stream-append (preorder-aux (tree-left t)) (stream (tree-data t)) (preorder-aux (tree-right t))
+           (stream-append (inorder-aux (tree-left t)) (stream (tree-data t)) (inorder-aux (tree-right t))
            ))))
   
   (define (traverse-postorder t)
@@ -53,7 +53,7 @@
   (define (postorder-aux t)
     (cond [(null? t) (stream)]
           (else
-           (stream-append (preorder-aux (tree-left t)) (preorder-aux (tree-right t)) (stream (tree-data t))
+           (stream-append (postorder-aux (tree-left t)) (postorder-aux (tree-right t)) (stream (tree-data t))
            ))))
   
   (undefine traverse-frontier)
